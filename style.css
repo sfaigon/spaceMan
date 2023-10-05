@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+#mainDiv {
+  height: 90vh;
+  width: 80vw;
+  background-image: url("resources/planet.png");
+  background-size: contain;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 5px;
+}
+#leftDiv {
+  display: flex;
+  justify-content: center;
+  height: 100   %;
+}
+#contain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 80%;
+    border: 2px solid white;
+    width: 80%;
+    margin: auto;
+}
+.letters {
+    text-align: center;
+    border: 2px solid white;
+    background-color: rgba(0,0,0,.75);
+}
+.lastRow {
+    grid-column: span 2;
+}
+h1 {
+    font-size: 20px;
+    color: white;
+}
