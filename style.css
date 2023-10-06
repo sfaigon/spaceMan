@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 #mainDiv {
   height: 90vh;
@@ -20,23 +20,44 @@ body{
   height: 100%;
 }
 #contain {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 80%;
-    border: 2px solid white;
-    width: 80%;
-    margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 80%;
+  border: 2px solid white;
+  width: 80%;
+  margin: auto;
 }
 .letters {
-    text-align: center;
-    border: 2px solid white;
-    background-color: rgba(0,0,0,.75);
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
 }
 .lastRow {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 h1 {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
+  margin: auto;
+}
+#rightDiv {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  gap: 5px;
+}
+#animationArea {
+  border: solid 5px white;
+}
+#answerArea {
+  display: flex;
+  border: solid 5px white;
+  align-items: center;
+}
+#answerLetters {
+}
+.testing {
+  border: solid 5px white;
+}
+.answLetters {
 }
