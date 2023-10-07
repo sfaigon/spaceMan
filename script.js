@@ -7,7 +7,7 @@ const wordListLength = wordBank.length - 1;
 const answerSpace = document.getElementById("answerArea");
 const letterBoard = document.getElementById("contain");
 const clickedLetters = new Array();
-const wrongGuesses = document.getElementById("tracker")
+const wrongGuesses = document.getElementById("tracker");
 
 //wrong guess counter
 let counter = 0;
@@ -34,7 +34,7 @@ function createWord(letter, idx) {
 
 letterBoard.addEventListener("click", handleClick);
 
-function handleClick(e){
+function handleClick(e) {
   const letter = e.target.textContent;
   e.target.textContent = "";
   // handles repeat clicks on same letter
@@ -46,10 +46,10 @@ function handleClick(e){
   //handle click letter not include in word
   if (!ans.includes(letter)) {
     counter++;
-    wrongGuesses.innerHTML= `<h1>You Have 7 Chances</h1><h1>Wrong Guesses So Far: ${counter}</h1>`;
-    if(counter === 7){
+    wrongGuesses.innerHTML = `<h1>You Have 7 Chances</h1><h1>Wrong Guesses So Far: ${counter}</h1>`;
+    if (counter === 7) {
       wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>GAME OVER :(</h1>";
-      letterBoard.removeEventListener('click', handleClick);
+      letterBoard.removeEventListener("click", handleClick);
     }
     return;
   }
@@ -60,13 +60,13 @@ function handleClick(e){
       targetLetter.innerHTML = `<h1 class="h1Answers">${letter}</h1>`;
     }
   });
-  ans.forEach(function(el,idx){
+  ans.forEach(function (el, idx) {
     if (el === letter) {
-      ans[idx]=null;
+      ans[idx] = null;
     }
   });
-  if(ans.every((el) => el === null )){
-    wrongGuesses.innerHTML= "<h1 class='gameOverMessage'>YOU WIN !!!!!</h1>";
-    letterBoard.removeEventListener('click', handleClick);
+  if (ans.every((el) => el === null)) {
+    wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>YOU WIN !!!!!</h1>";
+    letterBoard.removeEventListener("click", handleClick);
   }
 }
