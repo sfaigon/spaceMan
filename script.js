@@ -4,29 +4,69 @@ const noSpaces = wordList.replace(/ /g, "");
 const upperCase = noSpaces.toUpperCase();
 const wordBank = upperCase.split(",");
 const wordListLength = wordBank.length - 1;
-const answerSpace = document.getElementById("answerArea")
+const answerSpace = document.getElementById("answerArea");
+const letterBoard = document.getElementById("contain");
+const clickedLetters = new Array();
+const wrongGuesses = document.getElementById("tracker")
+
 //wrong guess counter
 let counter = 0;
 //random word picker
-const ranWordIdx = Math.floor(Math.random()* wordListLength);
+const ranWordIdx = Math.floor(Math.random() * wordListLength);
+//answer array
 const ans = wordBank[ranWordIdx].split("");
 console.log(ans);
 
-ans.forEach(function(letter, idx){
-  createWord(letter,idx);
-})
+ans.forEach(function (letter, idx) {
+  createWord(letter, idx);
+});
 
+//function to add the words to the answer area with empty spaces
 
-
-
-//function to add the words to the answer area
-
-
-function createWord(letter, idx){
+function createWord(letter, idx) {
   const newWord = document.createElement("div");
-  newWord.setAttribute("id",`letter${idx}`);
-  newWord.setAttribute("class","ansLetters")
-  newWord.innerHTML = `<h1>${letter}</h1>`;
-  console.log(newWord);
+  newWord.setAttribute("id", `letter${idx}`);
+  newWord.setAttribute("class", "ansLetters");
+  newWord.innerHTML = `<h1 class="h1Answers">_</h1>`;
+
   answerSpace.append(newWord);
+}
+
+letterBoard.addEventListener("click", handleClick);
+
+function handleClick(e){
+  const letter = e.target.textContent;
+  e.target.textContent = "";
+  // handles repeat clicks on same letter
+  if (clickedLetters.includes(letter)) {
+    return;
+  }
+  //array of clicked letters
+  clickedLetters.push(letter);
+  //handle click letter not include in word
+  if (!ans.includes(letter)) {
+    counter++;
+    wrongGuesses.innerHTML= `<h1>You Have 7 Chances</h1><h1>Wrong Guesses So Far: ${counter}</h1>`;
+    if(counter === 7){
+      wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>GAME OVER :(</h1>";
+      letterBoard.removeEventListener('click', handleClick);
+    }
+    return;
+  }
+  //handle click right letter
+  ans.forEach(function (el, idx) {
+    if (el === letter) {
+      const targetLetter = document.getElementById(`letter${idx}`);
+      targetLetter.innerHTML = `<h1 class="h1Answers">${letter}</h1>`;
+    }
+  });
+  ans.forEach(function(el,idx){
+    if (el === letter) {
+      ans[idx]=null;
+    }
+  });
+  if(ans.every((el) => el === null )){
+    wrongGuesses.innerHTML= "<h1 class='gameOverMessage'>YOU WIN !!!!!</h1>";
+    letterBoard.removeEventListener('click', handleClick);
+  }
 }
