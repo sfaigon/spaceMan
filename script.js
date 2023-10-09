@@ -47,6 +47,10 @@ function handleClick(e) {
   if (!ans.includes(letter)) {
     counter++;
     wrongGuesses.innerHTML = `<h1>You Have 7 Chances</h1><h1>Wrong Guesses So Far: ${counter}</h1>`;
+    if (counter !== 0) {
+      const missles = document.getElementById(`missle${counter}`);
+      missles.innerHTML = "<img src='./resources/missle.png' class='miss'>";
+    }
     if (counter === 7) {
       wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>GAME OVER :(</h1>";
       letterBoard.removeEventListener("click", handleClick);
@@ -56,6 +60,9 @@ function handleClick(e) {
           targetLetter.innerHTML = `<h1 class="h1Answers">${el}</h1>`;
         }
       });
+      const newExplosion = document.getElementById("tower");
+      newExplosion.innerHTML =
+        "<img src='./resources/explosion.jpg' class='city' />";
     }
     return;
   }

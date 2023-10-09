@@ -49,8 +49,9 @@ h1 {
 #animationArea {
   border: solid 5px white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
 }
 #answerArea {
   display: flex;
@@ -75,9 +76,27 @@ h1 {
 h1.gameOverMessage {
   font-size: 40px;
 }
-.fuse {
-border: 2ps solid white;
+.missle {
+  display: flex;
+  height: 12vh;
 }
-.bomb {
+#tower {
+  display: flex;
+  grid-column: span 4;
+  height: 12vh;
 
+  align-items: center;
+  margin: auto;
+}
+.miss {
+  transform: rotate(90deg);
+  margin: auto;
+  height: 12vh;
+}
+#missle6 {
+  grid-column: span 2;
+}
+.city {
+  height: 20vh;
+  width: 60vh;
 }
