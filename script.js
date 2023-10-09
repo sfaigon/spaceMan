@@ -8,7 +8,7 @@ const answerSpace = document.getElementById("answerArea");
 const letterBoard = document.getElementById("contain");
 const clickedLetters = new Array();
 const wrongGuesses = document.getElementById("tracker");
-
+clickedLetters.push("");
 //wrong guess counter
 let counter = 0;
 //random word picker
@@ -64,7 +64,6 @@ function handleClick(e) {
         "<img src='./resources/explosion.jpg' class='city' />";
       setTimeout(newGame, 3000);
     }
-    return;
   }
   //handle click right letter
   ans.forEach(function (el, idx) {
