@@ -100,3 +100,7 @@ h1.gameOverMessage {
   height: 20vh;
   width: 60vh;
 }
+#newGame {
+  margin: auto;
+  font-size: 50px;
+}

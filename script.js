@@ -15,7 +15,6 @@ let counter = 0;
 const ranWordIdx = Math.floor(Math.random() * wordListLength);
 //answer array
 const ans = wordBank[ranWordIdx].split("");
-console.log(ans);
 
 ans.forEach(function (letter, idx) {
   createWord(letter, idx);
@@ -63,6 +62,7 @@ function handleClick(e) {
       const newExplosion = document.getElementById("tower");
       newExplosion.innerHTML =
         "<img src='./resources/explosion.jpg' class='city' />";
+      setTimeout(newGame, 3000);
     }
     return;
   }
@@ -81,5 +81,13 @@ function handleClick(e) {
   if (ans.every((el) => el === null)) {
     wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>YOU WIN !!!!!</h1>";
     letterBoard.removeEventListener("click", handleClick);
+    setTimeout(newGame, 3000);
   }
+}
+function newGame() {
+  const btn = document.createElement("button");
+  btn.setAttribute("id", "newGame");
+  btn.innerHTML = "<a href = 'index.html'>Play Again?</a>";
+  answerSpace.innerHTML = "";
+  answerSpace.append(btn);
 }
