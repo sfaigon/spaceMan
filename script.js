@@ -50,6 +50,12 @@ function handleClick(e) {
     if (counter === 7) {
       wrongGuesses.innerHTML = "<h1 class='gameOverMessage'>GAME OVER :(</h1>";
       letterBoard.removeEventListener("click", handleClick);
+      ans.forEach(function (el, idx) {
+        if (el !== null) {
+          const targetLetter = document.getElementById(`letter${idx}`);
+          targetLetter.innerHTML = `<h1 class="h1Answers">${el}</h1>`;
+        }
+      });
     }
     return;
   }

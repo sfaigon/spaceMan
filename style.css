@@ -48,16 +48,19 @@ h1 {
 }
 #animationArea {
   border: solid 5px white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
 }
 #answerArea {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.80);
+  background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
 }
 
 .ansLetters {
   margin: auto;
-  
+
   height: 60px;
   width: 60px;
   align-items: center;
@@ -65,11 +68,16 @@ h1 {
 }
 .h1Answers {
   font-size: 40px;
-  
 }
 #tracker {
   grid-column: span 4;
 }
-h1.gameOverMessage{
-  font-size: 40;
+h1.gameOverMessage {
+  font-size: 40px;
+}
+.fuse {
+border: 2ps solid white;
+}
+.bomb {
+
 }
