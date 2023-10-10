@@ -31,7 +31,7 @@
 
 <p>It took some time to think about how I could name elements and have them dynamically change.</p>
 <h2>Link to Game</h2>
-<p></p>
+<p><a href = "https://sfaigon.github.io/spaceMan/">https://sfaigon.github.io/spaceMan/</a></p>
 
 <h2>Next Steps</h2>
 <p>Some things that I could add to this project would for one be animations. Instead of simply having pictures show up. Something else that can be added which I do not believe will take alot of time would be categories. Different wordbanks that the answer would be pulled out of instead of just one.</p>
