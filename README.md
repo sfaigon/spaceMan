@@ -5,9 +5,7 @@
 
 ![gamePic1](https://github.com/sfaigon/spaceMan/assets/55246409/9d958542-723a-4816-8a9a-a710fc9d09c0)
 <p>This is the first thing that comes up when you open the game. On the bottom left of the screen you see how many chances you have and how many mistakes you have made. On the bottom right side you see how many spaces there are, representing how many letters the word has. You then start guessing which letters the word contains. </p> 
-
-![gamePic1](https://github.com/sfaigon/spaceMan/assets/55246409/7f144e9a-a828-4a14-882f-5afea7be8555)
-
+![gamePic2](https://github.com/sfaigon/spaceMan/assets/55246409/8d9a334e-5f75-448a-a682-74815df4f630)
 <p>Here you can see I clicked the letter D. After I clicked it, the letter disappears and I can no longer click it again. The word did not contain the letter D so the wrong guess counter went up and a missle was dropped on the city.</p>
 ![gamePic3](https://github.com/sfaigon/spaceMan/assets/55246409/390cd9d7-7e70-416b-bce1-70159f235955)
 <p>Here I clicked the letter C which in the word and the filles in one of the spaces, no missle is dropped and the counter does not go up.</p>
