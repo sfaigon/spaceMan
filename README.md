@@ -5,13 +5,33 @@
 
 ![gamePic1](https://github.com/sfaigon/spaceMan/assets/55246409/9d958542-723a-4816-8a9a-a710fc9d09c0)
 <p>This is the first thing that comes up when you open the game. On the bottom left of the screen you see how many chances you have and how many mistakes you have made. On the bottom right side you see how many spaces there are, representing how many letters the word has. You then start guessing which letters the word contains. </p> 
-![gamePic2](https://github.com/sfaigon/spaceMan/assets/55246409/8d9a334e-5f75-448a-a682-74815df4f630)
+
+![gamePic2](https://github.com/sfaigon/spaceMan/assets/55246409/2d236f9e-88e6-4e0e-881d-662607be34b1)
 <p>Here you can see I clicked the letter D. After I clicked it, the letter disappears and I can no longer click it again. The word did not contain the letter D so the wrong guess counter went up and a missle was dropped on the city.</p>
+
 ![gamePic3](https://github.com/sfaigon/spaceMan/assets/55246409/390cd9d7-7e70-416b-bce1-70159f235955)
 <p>Here I clicked the letter C which in the word and the filles in one of the spaces, no missle is dropped and the counter does not go up.</p>
+
 ![gamPic4](https://github.com/sfaigon/spaceMan/assets/55246409/654bcc7d-bb56-4eb1-9de8-da77a737fac3)
 <p>Here is an example of when the player loses. The city explodes, the correct word is displayed, and the text Game Over appears where the counter was.</p>
+
 ![gamePic5](https://github.com/sfaigon/spaceMan/assets/55246409/c417653d-aec5-4757-8841-d5c815f793d0)
 <p>Here is an example of the palyer winning, the city does not explode, in this case no wrong guesses were made. And the message You Win is displayed.</p>
+
 ![gamePic6](https://github.com/sfaigon/spaceMan/assets/55246409/7c26b38b-98e9-4c24-acd3-bbc249b7eccb)
 <p>After a few second whether winning or losing, the player is then prompted with a buttong if they would like to play again.</p>
+
+<H2>Some Code Snippets</H2>
+
+![codeCorrectLetter](https://github.com/sfaigon/spaceMan/assets/55246409/5f035bb2-4796-48f8-882b-9859428169bd)
+<p>This was the logic to handling the correct letter</p>
+
+![codeWrongLetter](https://github.com/sfaigon/spaceMan/assets/55246409/c5c54aec-5f86-4483-b8be-58eb0b5bce03)
+<p>This was the logic for the wrong letter</p>
+
+<p>It took some time to think about how I could name elements and have them dynamically change.</p>
+<h2>Link to Game</h2>
+<p></p>
+
+<h2>Next Steps</h2>
+<p>Some things that I could add to this project would for one be animations. Instead of simply having pictures show up. Something else that can be added which I do not believe will take alot of time would be categories. Different wordbanks that the answer would be pulled out of instead of just one.</p>
