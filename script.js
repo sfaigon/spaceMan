@@ -43,7 +43,7 @@ function handleClick(e) {
   //array of clicked letters
   clickedLetters.push(letter);
   //handle click letter not include in word
-  if (!ans.includes(letter)) {
+  if (!ans.includes(letter)) {  
     counter++;
     wrongGuesses.innerHTML = `<h1>You Have 7 Chances</h1><h1>Wrong Guesses So Far: ${counter}</h1>`;
     if (counter !== 0) {
