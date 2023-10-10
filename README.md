@@ -20,3 +20,18 @@
 
 ![gamePic6](https://github.com/sfaigon/spaceMan/assets/55246409/7c26b38b-98e9-4c24-acd3-bbc249b7eccb)
 <p>After a few second whether winning or losing, the player is then prompted with a buttong if they would like to play again.</p>
+
+<H2>Some Code Snippets</H2>
+
+![codeCorrectLetter](https://github.com/sfaigon/spaceMan/assets/55246409/5f035bb2-4796-48f8-882b-9859428169bd)
+<p>This was the logic to handling the correct letter</p>
+
+![codeWrongLetter](https://github.com/sfaigon/spaceMan/assets/55246409/c5c54aec-5f86-4483-b8be-58eb0b5bce03)
+<p>This was the logic for the wrong letter</p>
+
+<p>It took some time to think about how I could name elements and have them dynamically change.</p>
+<h2>Link to Game</h2>
+<p></p>
+
+<h2>Next Steps</h2>
+<p>Some things that I could add to this project would for one be animations. Instead of simply having pictures show up. Something else that can be added which I do not believe will take alot of time would be categories. Different wordbanks that the answer would be pulled out of instead of just one.</p>
